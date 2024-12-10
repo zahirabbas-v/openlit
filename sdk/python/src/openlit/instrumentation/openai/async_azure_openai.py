@@ -171,7 +171,9 @@ def azure_async_chat_completions(gen_ai_endpoint, version, environment, applicat
                                 SemanticConvetion.GEN_AI_TYPE:
                                     SemanticConvetion.GEN_AI_TYPE_CHAT,
                                 SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                                    model
+                                    model,
+                                SemanticConvetion.GEN_AI_REQUEST_USER:
+                                    kwargs.get("user", "")
                             }
 
                             metrics["genai_requests"].add(1, attributes)
@@ -334,7 +336,9 @@ def azure_async_chat_completions(gen_ai_endpoint, version, environment, applicat
                             SemanticConvetion.GEN_AI_TYPE:
                                 SemanticConvetion.GEN_AI_TYPE_CHAT,
                             SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                                model
+                                model,
+                            SemanticConvetion.GEN_AI_REQUEST_USER:
+                                kwargs.get("user", "")
                         }
 
                         metrics["genai_requests"].add(1, attributes)
@@ -495,7 +499,9 @@ def azure_async_completions(gen_ai_endpoint, version, environment, application_n
                                 SemanticConvetion.GEN_AI_TYPE:
                                     SemanticConvetion.GEN_AI_TYPE_CHAT,
                                 SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                                    model
+                                    model,
+                                SemanticConvetion.GEN_AI_REQUEST_USER:
+                                    kwargs.get("user", "")
                             }
 
                             metrics["genai_requests"].add(1, attributes)
@@ -637,7 +643,9 @@ def azure_async_completions(gen_ai_endpoint, version, environment, application_n
                             SemanticConvetion.GEN_AI_TYPE:
                                 SemanticConvetion.GEN_AI_TYPE_CHAT,
                             SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                                model
+                                model,
+                            SemanticConvetion.GEN_AI_REQUEST_USER:
+                                kwargs.get("user", "")
                         }
 
                         metrics["genai_requests"].add(1, attributes)
@@ -749,7 +757,9 @@ def azure_async_embedding(gen_ai_endpoint, version, environment, application_nam
                         SemanticConvetion.GEN_AI_TYPE:
                             SemanticConvetion.GEN_AI_TYPE_EMBEDDING,
                         SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                            "azure_" + response.model
+                            "azure_" + response.model,
+                        SemanticConvetion.GEN_AI_REQUEST_USER:
+                            kwargs.get("user", "")
                     }
 
                     metrics["genai_requests"].add(1, attributes)
@@ -881,7 +891,9 @@ def azure_async_image_generate(gen_ai_endpoint, version, environment, applicatio
                         SemanticConvetion.GEN_AI_TYPE:
                             SemanticConvetion.GEN_AI_TYPE_IMAGE,
                         SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                            "azure_" + kwargs.get("model", "dall-e-3")
+                            "azure_" + kwargs.get("model", "dall-e-3"),
+                        SemanticConvetion.GEN_AI_REQUEST_USER:
+                            kwargs.get("user", "")
                     }
 
                     metrics["genai_requests"].add(1, attributes)

@@ -194,7 +194,9 @@ def async_chat_completions(gen_ai_endpoint, version, environment, application_na
                             SemanticConvetion.GEN_AI_TYPE:
                                 SemanticConvetion.GEN_AI_TYPE_CHAT,
                             SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                                self._kwargs.get("model", "gpt-3.5-turbo")
+                                self._kwargs.get("model", "gpt-3.5-turbo"),
+                            SemanticConvetion.GEN_AI_REQUEST_USER:
+                                self._kwargs.get("user", "")
                         }
 
                         metrics["genai_requests"].add(1, attributes)
@@ -388,7 +390,9 @@ def async_chat_completions(gen_ai_endpoint, version, environment, application_na
                             SemanticConvetion.GEN_AI_TYPE:
                                 SemanticConvetion.GEN_AI_TYPE_CHAT,
                             SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                                kwargs.get("model", "gpt-3.5-turbo")
+                                kwargs.get("model", "gpt-3.5-turbo"),
+                            SemanticConvetion.GEN_AI_REQUEST_USER:
+                                kwargs.get("user", "")
                         }
 
                         metrics["genai_requests"].add(1, attributes)
@@ -501,7 +505,9 @@ def async_embedding(gen_ai_endpoint, version, environment, application_name,
                         SemanticConvetion.GEN_AI_TYPE:
                             SemanticConvetion.GEN_AI_TYPE_EMBEDDING,
                         SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                            kwargs.get("model", "text-embedding-ada-002")
+                            kwargs.get("model", "text-embedding-ada-002"),
+                        SemanticConvetion.GEN_AI_REQUEST_USER:
+                            kwargs.get("user", "")
                     }
 
                     metrics["genai_requests"].add(1, attributes)
@@ -611,7 +617,9 @@ def async_finetune(gen_ai_endpoint, version, environment, application_name,
                         SemanticConvetion.GEN_AI_TYPE:
                             SemanticConvetion.GEN_AI_TYPE_FINETUNING,
                         SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                            kwargs.get("model", "gpt-3.5-turbo")
+                            kwargs.get("model", "gpt-3.5-turbo"),
+                        SemanticConvetion.GEN_AI_REQUEST_USER:
+                            kwargs.get("user", "")
                     }
 
                     metrics["genai_requests"].add(1, attributes)
@@ -740,7 +748,9 @@ def async_image_generate(gen_ai_endpoint, version, environment, application_name
                         SemanticConvetion.GEN_AI_TYPE:
                             SemanticConvetion.GEN_AI_TYPE_IMAGE,
                         SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                            kwargs.get("model", "dall-e-2")
+                            kwargs.get("model", "dall-e-2"),
+                        SemanticConvetion.GEN_AI_REQUEST_USER:
+                            kwargs.get("user", "")
                     }
 
                     metrics["genai_requests"].add(1, attributes)
@@ -859,7 +869,9 @@ def async_image_variatons(gen_ai_endpoint, version, environment, application_nam
                         SemanticConvetion.GEN_AI_TYPE:
                             SemanticConvetion.GEN_AI_TYPE_IMAGE,
                         SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                            kwargs.get("model", "dall-e-2")
+                            kwargs.get("model", "dall-e-2"),
+                        SemanticConvetion.GEN_AI_REQUEST_USER:
+                            kwargs.get("user", "")
                     }
 
                     metrics["genai_requests"].add(1, attributes)
@@ -965,7 +977,9 @@ def async_audio_create(gen_ai_endpoint, version, environment, application_name,
                         SemanticConvetion.GEN_AI_TYPE:
                             SemanticConvetion.GEN_AI_TYPE_AUDIO,
                         SemanticConvetion.GEN_AI_REQUEST_MODEL:
-                            kwargs.get("model", "tts-1")
+                            kwargs.get("model", "tts-1"),
+                        SemanticConvetion.GEN_AI_REQUEST_USER:
+                            kwargs.get("user", "")
                     }
 
                     metrics["genai_requests"].add(1, attributes)
