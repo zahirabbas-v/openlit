@@ -171,7 +171,7 @@ def chat_wrapper(version, environment, application_name, tracer, pricing_info, t
         # Check if it's an Azure instance by inspecting `base_url`
         try:
             base_url = getattr(instance, 'base_url', '')
-            if 'azure.com' in base_url:
+            if 'azure.com' in base_url or 'microsoft.com' in base_url:
                 # Switch to the Azure-specific chat completions logic
                 completion_func = azure_chat_completions("azure_openai.chat.completions",
                                                          version, environment, application_name,
@@ -201,7 +201,7 @@ def async_chat_wrapper(version, environment, application_name, tracer, pricing_i
         # Check if it's an Azure instance by inspecting `base_url`
         try:
             base_url = getattr(instance, 'base_url', '')
-            if 'azure.com' in base_url:
+            if 'azure.com' in base_url or 'microsoft.com' in base_url:
                 # Switch to the Azure-specific chat completions logic
                 completion_func = azure_async_chat_completions("azure_openai.chat.completions",
                                                                version, environment,
@@ -231,7 +231,7 @@ def image_generate_wrapper(version, environment, application_name, tracer, prici
         # Check if it's an Azure instance by inspecting `base_url`
         try:
             base_url = getattr(instance, 'base_url', '')
-            if 'azure.com' in base_url:
+            if 'azure.com' in base_url or 'microsoft.com' in base_url:
                 # Switch to the Azure-specific chat completions logic
                 completion_func = azure_image_generate("azure_openai.images.generate",
                                                        version, environment, application_name,
@@ -261,7 +261,7 @@ def async_image_generate_wrapper(version, environment, application_name, tracer,
         # Check if it's an Azure instance by inspecting `base_url`
         try:
             base_url = getattr(instance, 'base_url', '')
-            if 'azure.com' in base_url:
+            if 'azure.com' in base_url or 'microsoft.com' in base_url:
                 # Switch to the Azure-specific chat completions logic
                 completion_func = azure_async_image_generate("azure_openai.images.generate",
                                                              version, environment,
@@ -291,7 +291,7 @@ def embedding_wrapper(version, environment, application_name, tracer, pricing_in
         # Check if it's an Azure instance by inspecting `base_url`
         try:
             base_url = getattr(instance, 'base_url', '')
-            if 'azure.com' in base_url:
+            if 'azure.com' in base_url or 'microsoft.com' in base_url:
                 # Switch to the Azure-specific chat completions logic
                 completion_func = azure_embedding("azure_openai.embeddings",
                                                   version, environment, application_name,
@@ -320,7 +320,7 @@ def async_embedding_wrapper(version, environment, application_name, tracer,
         # Check if it's an Azure instance by inspecting `base_url`
         try:
             base_url = getattr(instance, 'base_url', '')
-            if 'azure.com' in base_url:
+            if 'azure.com' in base_url or 'microsoft.com' in base_url:
                 # Switch to the Azure-specific chat completions logic
                 completion_func = azure_async_embedding("azure_openai.embeddings", version,
                                                         environment, application_name, tracer,
