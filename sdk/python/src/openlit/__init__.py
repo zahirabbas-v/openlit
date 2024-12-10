@@ -38,6 +38,7 @@ from openlit.instrumentation.vllm import VLLMInstrumentor
 from openlit.instrumentation.google_ai_studio import GoogleAIStudioInstrumentor
 from openlit.instrumentation.reka import RekaInstrumentor
 from openlit.instrumentation.premai import PremAIInstrumentor
+from openlit.instrumentation.assemblyai import AssemblyAIInstrumentor
 from openlit.instrumentation.azure_ai_inference import AzureAIInferenceInstrumentor
 from openlit.instrumentation.langchain import LangChainInstrumentor
 from openlit.instrumentation.llamaindex import LlamaIndexInstrumentor
@@ -51,6 +52,7 @@ from openlit.instrumentation.milvus import MilvusInstrumentor
 from openlit.instrumentation.astra import AstraInstrumentor
 from openlit.instrumentation.transformers import TransformersInstrumentor
 from openlit.instrumentation.litellm import LiteLLMInstrumentor
+from openlit.instrumentation.together import TogetherInstrumentor
 from openlit.instrumentation.crewai import CrewAIInstrumentor
 from openlit.instrumentation.ag2 import AG2Instrumentor
 from openlit.instrumentation.multion import MultiOnInstrumentor
@@ -59,6 +61,9 @@ from openlit.instrumentation.phidata import PhidataInstrumentor
 from openlit.instrumentation.julep import JulepInstrumentor
 from openlit.instrumentation.ai21 import AI21Instrumentor
 from openlit.instrumentation.controlflow import ControlFlowInstrumentor
+from openlit.instrumentation.crawl4ai import Crawl4AIInstrumentor
+from openlit.instrumentation.firecrawl import FireCrawlInstrumentor
+from openlit.instrumentation.letta import LettaInstrumentor
 from openlit.instrumentation.gpu import GPUInstrumentor
 import openlit.guard
 import openlit.evals
@@ -184,7 +189,6 @@ def instrument_if_available(
                 metrics_dict=config.metrics_dict,
                 disable_metrics=config.disable_metrics,
             )
-            logger.info("Instrumented %s", instrumentor_name)
         else:
             # pylint: disable=line-too-long
             logger.info("Library for %s (%s) not found. Skipping instrumentation", instrumentor_name, module_name)
@@ -256,6 +260,11 @@ def init(environment="default", application_name="default", tracer=None, otlp_en
         "astra": "astrapy",
         "ai21": "ai21",
         "controlflow": "controlflow",
+        "assemblyai": "assemblyai",
+        "crawl4ai": "crawl4ai",
+        "firecrawl": "firecrawl",
+        "letta": "letta",
+        "together": "together",
     }
 
     invalid_instrumentors = [
@@ -348,6 +357,11 @@ def init(environment="default", application_name="default", tracer=None, otlp_en
             "astra": AstraInstrumentor(),
             "ai21": AI21Instrumentor(),
             "controlflow": ControlFlowInstrumentor(),
+            "assemblyai": AssemblyAIInstrumentor(),
+            "crawl4ai": Crawl4AIInstrumentor(),
+            "firecrawl": FireCrawlInstrumentor(),
+            "letta": LettaInstrumentor(),
+            "together": TogetherInstrumentor(),
         }
 
         # Initialize and instrument only the enabled instrumentors

@@ -46,6 +46,7 @@ class SemanticConvetion:
     GEN_AI_REQUEST_AUDIO_RESPONSE_FORMAT = "gen_ai.request.audio_response_format"
     GEN_AI_REQUEST_AUDIO_SPEED = "gen_ai.request.audio_speed"
     GEN_AI_REQUEST_AUDIO_SETTINGS = "gen_ai.request.audio_settings"
+    GEN_AI_REQUEST_AUDIO_DURATION = "gen_ai.request.audio_duration"
     GEN_AI_REQUEST_FINETUNE_STATUS = "gen_ai.request.fine_tune_status"
     GEN_AI_REQUEST_FINETUNE_MODEL_SUFFIX = "gen_ai.request.fine_tune_model_suffix"
     GEN_AI_REQUEST_FINETUNE_MODEL_EPOCHS = "gen_ai.request.fine_tune_n_epochs"
@@ -129,6 +130,11 @@ class SemanticConvetion:
     GEN_AI_SYSTEM_JULEP = "julep"
     GEN_AI_SYSTEM_AI21 = "ai21"
     GEN_AI_SYSTEM_CONTROLFLOW = "controlflow"
+    GEN_AI_SYSTEM_ASSEMBLYAI = "assemblyai"
+    GEN_AI_SYSTEM_CRAWL4AI = "crawl4ai"
+    GEN_AI_SYSTEM_FIRECRAWL = "firecrawl"
+    GEN_AI_SYSTEM_LETTA = "letta"
+    GEN_AI_SYSTEM_TOGETHER = "together"
 
     # Vector DB
     DB_OPERATION_API_ENDPOINT = "db.operation.api_endpoint"
@@ -197,15 +203,20 @@ class SemanticConvetion:
     GEN_AI_AGENT_TOOLS = "gen_ai.agent.tools"
     GEN_AI_AGENT_TOOL_RESULTS = "gen_ai.agent.tool_results"
     GEN_AI_AGENT_TASK = "gen_ai.agent.task"
+    GEN_AI_AGENT_PARAMS = "gen_ai.agent.params"
     GEN_AI_AGENT_INSTRUCTIONS = "gen_ai.agent.instructions"
     GEN_AI_AGENT_STORAGE = "gen_ai.agent.storage"
     GEN_AI_AGENT_EXPECTED_OUTPUT = "gen_ai.agent.expected_output"
     GEN_AI_AGENT_ACTUAL_OUTPUT = "gen_ai.agent.actual_output"
     GEN_AI_AGENT_HUMAN_INPUT = "gen_ai.agent.human_input"
+    GEN_AI_AGENT_SCHEMA = "gen_ai.agent.schema"
     GEN_AI_AGENT_TASK_ASSOCIATION = "gen_ai.agent.task_associations"
     GEN_AI_AGENT_BROWSE_URL = "gen_ai.agent.browse_url"
     GEN_AI_AGENT_STEP_COUNT = "gen_ai.agent.step_count"
     GEN_AI_AGENT_RESPONSE_TIME = "gen_ai.agent.response_time"
+    GEN_AI_AGENT_STRATEGY = "gen_ai.agent.strategy"
+
+    GEN_AI_AGENT_TYPE_BROWSER = "browser"
 
     # GPU
     GPU_INDEX = "gpu.index"

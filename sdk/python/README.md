@@ -25,7 +25,7 @@ This project proudly follows and maintains the [Semantic Conventions](https://gi
 
 ## ⚡ Features
 
-- 🔎 **Auto Instrumentation**: Works with 40+ LLM providers, Agents, Vector databases, and GPUs with just one line of code.
+- 🔎 **Auto Instrumentation**: Works with 50+ LLM providers, Agents, Vector databases, and GPUs with just one line of code.
 - 🔭 **OpenTelemetry-Native Observability SDKs**: Vendor-neutral SDKs that can send traces and metrics to your existing observability tool like Prometheus and Jaeger.
 - 💲 **Cost Tracking for Custom and Fine-Tuned Models**: Pass custom pricing files for accurate budgeting of custom and fine-tuned models.
 - 🚀 **Suppport for OpenLIT Features**: Includes suppprt for prompt management and secrets management features available in OpenLIT.
@@ -38,7 +38,7 @@ This project proudly follows and maintains the [Semantic Conventions](https://gi
 | [✅ Ollama](https://docs.openlit.io/latest/integrations/ollama)                      | [✅ Pinecone](https://docs.openlit.io/latest/integrations/pinecone)       | [✅ LiteLLM](https://docs.openlit.io/latest/integrations/litellm)          | [✅ AMD](https://docs.openlit.io/latest/integrations/amd-gpu)      |
 | [✅ Anthropic](https://docs.openlit.io/latest/integrations/anthropic)                | [✅ Qdrant](https://docs.openlit.io/latest/integrations/qdrant)           | [✅ LlamaIndex](https://docs.openlit.io/latest/integrations/llama-index)   |               |
 | [✅ GPT4All](https://docs.openlit.io/latest/integrations/gpt4all)                    | [✅ Milvus](https://docs.openlit.io/latest/integrations/milvus)           | [✅ Haystack](https://docs.openlit.io/latest/integrations/haystack)        |               |
-| [✅ Cohere](https://docs.openlit.io/latest/integrations/cohere)                      | [✅ AstraDB](https://docs.openlit.io/latest/integrations/astradb) | [✅ EmbedChain](https://docs.openlit.io/latest/integrations/embedchain)    |               |
+| [✅ Cohere](https://docs.openlit.io/latest/integrations/cohere)                      | [✅ AstraDB](https://docs.openlit.io/latest/integrations/astradb)         | [✅ EmbedChain](https://docs.openlit.io/latest/integrations/embedchain)    |               |
 | [✅ Mistral](https://docs.openlit.io/latest/integrations/mistral)                    |                                                                          | [✅ Guardrails](https://docs.openlit.io/latest/integrations/guardrails)    |               |
 | [✅ Azure OpenAI](https://docs.openlit.io/latest/integrations/azure-openai)          |                                                                          | [✅ CrewAI](https://docs.openlit.io/latest/integrations/crewai)            |               |
 | [✅ Azure AI Inference](https://docs.openlit.io/latest/integrations/azure-ai-inference) |                                                                          | [✅ DSPy](https://docs.openlit.io/latest/integrations/dspy)                |               |
@@ -49,14 +49,16 @@ This project proudly follows and maintains the [Semantic Conventions](https://gi
 | [✅ Vertex AI](https://docs.openlit.io/latest/integrations/vertexai)                 |                                                                          | [✅ MultiOn](https://docs.openlit.io/latest/integrations/multion)          |               |
 | [✅ Groq](https://docs.openlit.io/latest/integrations/groq)                          |                                                                          | [✅ Julep AI](https://docs.openlit.io/latest/integrations/julep-ai)        |               |
 | [✅ ElevenLabs](https://docs.openlit.io/latest/integrations/elevenlabs)              |                                                                          | [✅ ControlFlow](https://docs.openlit.io/latest/integrations/controlflow)  |               |
-| [✅ vLLM](https://docs.openlit.io/latest/integrations/vllm)                          |                                                                          |                                                |               |
-| [✅ OLA Krutrim](https://docs.openlit.io/latest/integrations/krutrim)                |                                                                          |                                                |               |
-| [✅ Google AI Studio](https://docs.openlit.io/latest/integrations/google-ai-studio)  |                                                                          |                                                |               |
+| [✅ vLLM](https://docs.openlit.io/latest/integrations/vllm)                          |                                                                          | [✅ Crawl4AI](https://docs.openlit.io/latest/integrations/crawl4ai)        |               |
+| [✅ OLA Krutrim](https://docs.openlit.io/latest/integrations/krutrim)                |                                                                          | [✅ FireCrawl](https://docs.openlit.io/latest/integrations/firecrawl)      |               |
+| [✅ Google AI Studio](https://docs.openlit.io/latest/integrations/google-ai-studio)  |                                                                          | [✅ Letta](https://docs.openlit.io/latest/integrations/letta)              |               |
 | [✅ NVIDIA NIM](https://docs.openlit.io/latest/integrations/nvidia-nim)              |                                                                          |                                                |               |
 | [✅ Titan ML](https://docs.openlit.io/latest/integrations/titan-ml)                  |                                                                          |                                                |               |
 | [✅ Reka AI](https://docs.openlit.io/latest/integrations/reka)                       |                                                                          |                                                |               |
 | [✅ xAI](https://docs.openlit.io/latest/integrations/xai)                            |                                                                          |                                                |               |
 | [✅ Prem AI](https://docs.openlit.io/latest/integrations/premai)                     |                                                                          |                                                |               |
+| [✅ Assembly AI](https://docs.openlit.io/latest/integrations/assemblyai)             |                                                                          |                                                |               |
+| [✅ Together](https://docs.openlit.io/latest/integrations/together)                  |                                                                          |                                                |               |
 
 ## Supported Destinations
 - [✅ OpenTelemetry Collector](https://docs.openlit.io/latest/connections/otelcol)
@@ -228,7 +230,7 @@ We are dedicated to continuously improving OpenLIT SDKs. Here's a look at what's
 | [OpenTelemetry-native auto-instrumentation for NVIDIA GPU Monitoring](https://docs.openlit.io/latest/features/gpu)           | ✅ Completed  |
 | [Real-Time Guardrails Implementation](https://docs.openlit.io/latest/features/guardrails)                                                      | ✅ Completed    |
 | [Programmatic Evaluation for LLM Response](https://docs.openlit.io/latest/features/evaluations)                                                      | ✅ Completed    |
-| [OpenTelmetry auto-instrumentation for Agent Frameworks like CrewAI, DsPy]()             | 🔜 Coming Soon  |
+| [OpenTelemetry-native AI Agent Observability]()             | ✅ Completed  |
 
 
 ## 🌱 Contributing
